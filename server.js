@@ -16,7 +16,7 @@ var articles={
      </p>`,
     
 },
-article_two: {title:"Article two|Malekulashtar",
+article_two:{title:"Article two|Malekulashtar",
     heading:"Article two",
     date:"Sep 10,2018",
     data:
