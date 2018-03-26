@@ -5,12 +5,65 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var article_one={
+    title:"Article one|Malekulashtar",
+    heading:"Article one",
+    date:"Sep 5,2018",
+    data:
+        `<p>
+     This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
+     </p>`,
+    
+};
+
+function createtemplate(content)
+{
+var title=content.title;
+var heading=content.heading;
+var date=content.date;
+var data=content.data;
+
+var htmltemplate=`
+<html>
+ <head>
+     <title>
+       ${title}
+     </title>
+     
+   <link href="/ui/style.css" rel="stylesheet" />
+     
+ </head>
+<body>
+    <div class="container">
+    <div>
+        <a href="/">home</a>
+    </div>
+    <hr/>
+    <h1>${heading}</h1>
+ <div> 
+ ${date}
+</div>
+<div>
+    ${data}
+    </div>
+    </div>
+</body>    
+</html>';
+
+return htmltemplate;
+}
+
+
+
+
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article_one', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article_one.html'));
+ res.send(createtemplate(article_one));
 });
 
 app.get('/article_two', function (req, res) {
@@ -35,5 +88,5 @@ app.get('/ui/madi.png', function (req, res) {
 
 var port = 80;
 app.listen(port, function () {
-  console.log(`IMAD course app listening on port ${port}!`);
+ console.log(`IMAD course app listening on port ${port}!`);
 });
