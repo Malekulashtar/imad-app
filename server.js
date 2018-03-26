@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articles={
-`article_one:{
+article_one:{
     title:"Article one|Malekulashtar",
     heading:"Article one",
     date:"Sep 5,2018",
@@ -29,7 +29,7 @@ article_three:{title:"Article three|Malekulashtar",
     data:
         `<p>
      This is my third article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-     </p>`,}`
+     </p>`,}
 };
 
 function createtemplate(content)
@@ -98,7 +98,7 @@ app.get('/ui/madi.png', function (req, res) {
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
-var port = 80;
+var port = 8080;
 app.listen(port, function () {
  console.log(`IMAD course app listening on port ${port}!`);
 });
