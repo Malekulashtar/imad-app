@@ -13,9 +13,8 @@ article_one:{
     data:
         `<p>
      This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
-     </p>`,
-    
-},
+     </p>`
+    };
 article_two:{title:"Article two|Malekulashtar",
     heading:"Article two",
     date:"Sep 10,2018",
