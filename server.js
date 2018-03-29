@@ -15,7 +15,7 @@ article_one:
         `<p>
      This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
      </p>`,
-};
+},
 article_two:
 {
     title:"Article two|Malekulashtar";
@@ -25,7 +25,7 @@ article_two:
         `<p>
      This is my second article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
      </p>`,
-};
+},
 article_three:
 {
     title:"Article three|Malekulashtar",
@@ -35,7 +35,7 @@ article_three:
         `<p>
      This is my third article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.This is my first article.
      </p>`,
-};
+},
           };
 
 function createtemplate(content)
