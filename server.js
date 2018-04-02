@@ -41,16 +41,13 @@ var title=content.title;
 var heading=content.heading;
 var date=content.date;
 var data=content.data;
-var htmltemplate=`
-<html>
-<link href="/ui/style.css" rel="stylesheet" /> 
+var htmltemplate=`<html>
  <head>
      <title>
        ${title}
      </title>
-    
-     
- </head>
+     <link href="/ui/style.css" rel="stylesheet" /> 
+    </head>
 <body>
     <div class="container">
     <div>
@@ -68,7 +65,7 @@ var htmltemplate=`
 </body>    
 </html>';
 return htmltemplate;
-}
+};
 
 
 app.get('/', function (req, res) {
@@ -97,5 +94,5 @@ app.get('/ui/madi.png', function (req, res) {
 
 var port = 8080;
 app.listen(port, function() {
- console.log("IMAD course app listening on port ${port}!");
+ console.log('IMAD course app listening on port ${port}!');
 });
