@@ -41,31 +41,33 @@ var title=content.title;
 var heading=content.heading;
 var date=content.date;
 var data=content.data;
-var htmltemplate=`<html>
+var htmltemplate=`
+<html>
  <head>
      <title>
        ${title}
      </title>
      <link href="/ui/style.css" rel="stylesheet" /> 
-    </head>
+ </head>
 <body>
-    <div class="container">
+<div class="container">
     <div>
         <a href="/">home</a>
     </div>
     <hr/>
     <h1>${heading}</h1>
- <div> 
- ${date}
+      <div> 
+       ${date}
+      </div>
+    <div>
+     ${data}
+    </div>
 </div>
-<div>
-    ${data}
-    </div>
-    </div>
 </body>    
-</html>';
+</html>
+`;
 return htmltemplate;
-};
+}
 
 
 app.get('/', function (req, res) {
