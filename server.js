@@ -43,12 +43,12 @@ var date=content.date;
 var data=content.data;
 var htmltemplate=`
 <html>
+<link href="/ui/style.css" rel="stylesheet" /> 
  <head>
      <title>
        ${title}
      </title>
-     
-   <link href="/ui/style.css" rel="stylesheet" />
+    
      
  </head>
 <body>
