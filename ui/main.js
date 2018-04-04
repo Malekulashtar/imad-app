@@ -16,6 +16,6 @@ button.onclick=function(){
         }
     };
     
-    request.open('GET',http://afmul53.imad.hasura-app.io/counter,true);
+    request.open('GET',afmul53.imad.hasura-app.io/counter,true);
     request.send(null);
 };
