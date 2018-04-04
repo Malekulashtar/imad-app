@@ -81,7 +81,7 @@ var articlename=req.params.articlename;
    res.send(createtemplate(articles[articlename]));
 });
 
-
+var counter=0;
 app.get('/counter',function(req,send){
     counter=conter+1;
     res.send(counter.toString());
