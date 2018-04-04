@@ -82,6 +82,13 @@ var articlename=req.params.articlename;
 });
 
 
+app.get('/counter',function(req,send){
+    counter=conter+1;
+    res.send(counter.toString());
+});
+
+
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
