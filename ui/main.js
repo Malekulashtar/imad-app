@@ -1,4 +1,4 @@
-var button=document.getElementById('coounter');
+var button=document.getElementById('counter');
 
 
 
