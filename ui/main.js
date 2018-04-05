@@ -40,10 +40,10 @@ submit.onclick=function()
     ul.innerHTML=list;
         }
         }
-        var name=nameinput.value;
-var submit=document.getElementById('submit_btn');
+      
     };
-    
+      var name=nameinput.value;
+var submit=document.getElementById('submit_btn');
     request.open('GET','http://afmul53.imad.hasura-app.io/submit-name?name='+name,true);
     request.send(null);
    
