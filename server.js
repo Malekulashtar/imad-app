@@ -86,7 +86,7 @@ app.get('/', function (req, res) {
 
 var pool=new pool(config);
 app.get('/articles/:articlename',function(req,res){
-pool.query("SELECT * FROM article WHERE title='"+req.params.artclename"'",function(err,result){
+pool.query("SELECT * FROM article WHERE title='"+req.params.artclename+"'",function(err,result){
        if(err){res.status(500).send(err,toString());}
        else{
            if(result.rows.length===0)
@@ -98,7 +98,7 @@ pool.query("SELECT * FROM article WHERE title='"+req.params.artclename"'",functi
            res.send(JSON.stringify(result));
        }}
        
-   };
+   });
 });
 
 
