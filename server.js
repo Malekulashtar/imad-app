@@ -119,7 +119,7 @@ app.get('/submit-name',function(req,res){
 });
 
 app.get('/articles/:articlename', function (req, res){ 
-   pool.query("SELECT * FROM article WHERE title='"+req.params.artclename+"'",function(err,result){
+pool.query("SELECT * FROM article WHERE title='"+req.params.articlename+"'",function(err,result){
        if(err){res.status(500).send(err,toString());}
        else{
            if(result.rows.length===0)
@@ -133,9 +133,7 @@ app.get('/articles/:articlename', function (req, res){
        }}
        
    });
-var articlename=req.params.articlename;
 
-   
 });
 
 var counter=0;
