@@ -83,15 +83,22 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+
 var pool=new pool(config);
-app.get('/articlename',function(req,res){
-   pool.query('SELECT * FROM test',function(err,result){
+app.get('/articles/:articlename',function(req,res){
+pool.query("SELECT * FROM article WHERE title='"+req.params.artclename"'",function(err,result){
        if(err){res.status(500).send(err,toString());}
        else{
+           if(result.rows.length===0)
+           {
+               res.status(404).send('article not found')
+           }
+           else
+           {
            res.send(JSON.stringify(result));
-       }
+       }}
        
-   }) 
+   };
 });
 
 
