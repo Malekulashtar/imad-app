@@ -94,6 +94,18 @@ app.get('/hash/:input',function(req,res){
     res.send(hashedstring);
 });
 
+app.post('/create-user',function(req,res){
+    var username=req.body.username;
+    var password=req.body.password;
+    var salt=crypto.RandomBytes(120).toString('hex');
+    var dbstring=hash(password,salt);
+    pool.query('INSERT INTO "user" (usernam,password) VALUES ($1,$2)',[username,dbstring],function(err,result){
+        
+    }
+});
+
+
+
 
 var Pool=new Pool(config);
 app.get('/articles/:articleName', function (req, res){ 
